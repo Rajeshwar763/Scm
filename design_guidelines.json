@@ -1,0 +1,80 @@
+{
+  "theme": "light",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "colors": {
+    "primary": "#1E3A6E",
+    "secondary": "#E8622A",
+    "background": "#FFFFFF",
+    "surface": "#F8FAFC",
+    "text_primary": "#0F172A",
+    "text_secondary": "#475569",
+    "border": "#E2E8F0",
+    "dark_background": "#0F1C35"
+  },
+  "typography": {
+    "headings_font": "Outfit",
+    "body_font": "DM Sans",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight font-bold text-gray-900",
+      "h2": "text-3xl sm:text-4xl tracking-tight font-bold text-gray-900",
+      "h3": "text-2xl sm:text-3xl tracking-tight font-semibold text-gray-900",
+      "body": "text-base sm:text-lg leading-relaxed text-gray-600",
+      "label": "text-sm uppercase tracking-[0.2em] font-semibold text-[#E8622A]"
+    }
+  },
+  "layout_and_spacing": {
+    "section_padding": "py-20 sm:py-32",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8",
+    "border_radius": "rounded-xl",
+    "shadows": {
+      "card": "shadow-sm hover:shadow-md transition-shadow duration-300",
+      "button": "shadow-sm hover:shadow-md"
+    }
+  },
+  "components": {
+    "header": "Sticky glassmorphism header. backdrop-blur-xl bg-white/90 border-b border-gray-100. z-50.",
+    "button_primary": "bg-[#E8622A] text-white hover:bg-[#D05625] transition-colors px-6 py-3 rounded-md font-medium inline-flex items-center justify-center",
+    "button_secondary": "bg-transparent text-[#1E3A6E] border-2 border-[#1E3A6E] hover:bg-[#1E3A6E] hover:text-white transition-colors px-6 py-3 rounded-md font-medium inline-flex items-center justify-center",
+    "card": "bg-white border border-gray-100 p-8 rounded-xl hover:-translate-y-1 transition-transform duration-300 shadow-sm",
+    "footer": "bg-[#0F1C35] text-white py-20"
+  },
+  "media": {
+    "hero_image": "https://static.prod-images.emergentagent.com/jobs/a877fc25-82a1-4c64-b0b5-2272831b74eb/images/2b650d60ce8b39f27e95698d190cc931f41c0e96e0083191bab4bbda2432b487.png",
+    "hero_abstract_bg": "https://static.prod-images.emergentagent.com/jobs/a877fc25-82a1-4c64-b0b5-2272831b74eb/images/cde51ea99f794b95b97f32e2eec6b69f68a8b13d21f0876eb7643ac254f26a91.png",
+    "industries": {
+      "it": "https://images.unsplash.com/photo-1737573296361-75315239293a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBwcm9mZXNzaW9uYWxzfGVufDB8fHx8MTc3NDg2NTgzMHww&ixlib=rb-4.1.0&q=85",
+      "manufacturing": "https://images.unsplash.com/photo-1647427060118-4911c9821b82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwxfHxtYW51ZmFjdHVyaW5nJTIwcGxhbnR8ZW58MHx8fHwxNzc0ODY1ODMyfDA&ixlib=rb-4.1.0&q=85",
+      "construction": "https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "facility": "https://images.unsplash.com/photo-1774031159721-aec9230f38db?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxmYWNpbGl0eSUyMG1hbmFnZW1lbnQlMjBjbGVhbmluZ3xlbnwwfHx8fDE3NzQ4NjU4NTd8MA&ixlib=rb-4.1.0&q=85"
+    },
+    "about_team": "https://images.pexels.com/photos/6950048/pexels-photo-6950048.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  "pages_and_routing": {
+    "Home": "Hero section with gradient overlay, Introduction, Bento grid of Services, Industries with images, Testimonials, CTA section.",
+    "About Us": "Company overview, Mission & Vision (2-col layout), Leadership profiles, Core Values.",
+    "Services": "Detailed cards for IT Staffing, Manpower Supply, RPO, Payroll. Use lucide-react icons.",
+    "Industries We Serve": "Showcase of IT, Manufacturing, Construction, Facility Management, International markets. Large image cards.",
+    "Careers": "List of Job Openings using Accordion. Resume upload form inside a Dialog or side panel.",
+    "Clients": "Logo marquee or grid showing companies worked with.",
+    "Contact Us": "Contact form, Contact Info (Phone, Email, Address), embedded Google Map."
+  },
+  "animation_and_interaction": {
+    "scroll_reveal": "Use framer-motion `initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}` for sections.",
+    "hover_effects": "Cards lift slightly `-translate-y-1`. Buttons have subtle scale `hover:scale-105`.",
+    "marquee": "Use `react-fast-marquee` for the Clients section for smooth infinite scroll."
+  },
+  "testing_attributes": {
+    "rule": "All interactive elements must include `data-testid` (e.g., `data-testid='contact-submit-button'`, `data-testid='nav-services-link'`)."
+  },
+  "instructions_to_main_agent": [
+    "Use the user's provided logo for the header and footer.",
+    "Use the brand colors Navy Blue (#1E3A6E) as the primary structural color and Orange (#E8622A) for highlights and primary CTAs.",
+    "Use Outfit for Headings and DM Sans for Body.",
+    "Ensure all text over images or dark backgrounds has a high contrast ratio. Use a navy blue overlay on the hero image (e.g. bg-[#1E3A6E]/80).",
+    "Install `lucide-react`, `framer-motion`, `react-fast-marquee`.",
+    "Use shadcn/ui components for Form, Input, Textarea, Button, Card, Accordion, Dialog.",
+    "Implement a mobile-first responsive design.",
+    "Use the company address: H.no.4-106, Pragathi Nagar, Moosapet, Balanagar, Rangareddy, Telangana 500018 in the Footer and Contact Us page."
+  ]
+}
