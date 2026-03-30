@@ -27,7 +27,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <img src={LOGO_URL} alt="SCM Group" className="h-14 w-auto object-contain mb-4 brightness-0 invert" />
+            <div className="inline-block bg-white/10 rounded-xl p-2 mb-4">
+              <img src={LOGO_URL} alt="SCM Group" className="h-12 w-auto object-contain" />
+            </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
               SCM Group Management Services — India's trusted IT staffing and manpower solution provider, connecting businesses with top talent across diverse sectors.
             </p>
