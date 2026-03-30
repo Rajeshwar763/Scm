@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Users, Briefcase, Award, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Shield, Clock } from "lucide-react";
 
-const HERO_IMG = "https://static.prod-images.emergentagent.com/jobs/a877fc25-82a1-4c64-b0b5-2272831b74eb/images/2b650d60ce8b39f27e95698d190cc931f41c0e96e0083191bab4bbda2432b487.png";
-const ABOUT_IMG = "https://images.pexels.com/photos/6950048/pexels-photo-6950048.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+const HERO_IMG = "https://images.pexels.com/photos/7580750/pexels-photo-7580750.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+const ABOUT_IMG = "https://images.pexels.com/photos/8127807/pexels-photo-8127807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 
 const stats = [
   { value: "500+", label: "Successful Placements", icon: Users },
@@ -20,10 +20,10 @@ const services = [
 ];
 
 const industries = [
-  { name: "Information Technology", img: "https://images.unsplash.com/photo-1737573296361-75315239293a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBwcm9mZXNzaW9uYWxzfGVufDB8fHx8MTc3NDg2NTgzMHww&ixlib=rb-4.1.0&q=85" },
-  { name: "Manufacturing", img: "https://images.unsplash.com/photo-1647427060118-4911c9821b82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwxfHxtYW51ZmFjdHVyaW5nJTIwcGxhbnR8ZW58MHx8fHwxNzc0ODY1ODMyfDA&ixlib=rb-4.1.0&q=85" },
-  { name: "Construction", img: "https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
-  { name: "Facility Management", img: "https://images.unsplash.com/photo-1774031159721-aec9230f38db?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxmYWNpbGl0eSUyMG1hbmFnZW1lbnQlMjBjbGVhbmluZ3xlbnwwfHx8fDE3NzQ4NjU4NTd8MA&ixlib=rb-4.1.0&q=85" },
+  { name: "Information Technology", img: "https://images.unsplash.com/photo-1569653402334-2e98fbaa80ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBJVCUyMHNvZnR3YXJlJTIwZW5naW5lZXJzJTIwd29ya2luZyUyMGNvbXB1dGVyc3xlbnwwfHx8fDE3NzQ4NjcwMzN8MA&ixlib=rb-4.1.0&q=85" },
+  { name: "Manufacturing", img: "https://images.pexels.com/photos/32845683/pexels-photo-32845683.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
+  { name: "Construction", img: "https://images.unsplash.com/photo-1630309904321-4f320230bced?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwzfHxJbmRpYSUyMGNvbnN0cnVjdGlvbiUyMHNpdGUlMjB3b3JrZXJzJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzc0ODY3MDM1fDA&ixlib=rb-4.1.0&q=85" },
+  { name: "Facility Management", img: "https://images.pexels.com/photos/9462636/pexels-photo-9462636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
 ];
 
 const testimonials = [

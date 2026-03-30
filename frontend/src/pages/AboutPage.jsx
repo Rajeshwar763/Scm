@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Target, Eye, Heart, Shield, Users, Award, CheckCircle, ArrowRight } from "lucide-react";
 
-const TEAM_IMG = "https://images.pexels.com/photos/6950048/pexels-photo-6950048.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+const TEAM_IMG = "https://images.pexels.com/photos/8127807/pexels-photo-8127807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 
 const values = [
   { icon: Shield, title: "Integrity", desc: "We operate with full transparency and ethical conduct in every client and candidate interaction." },
