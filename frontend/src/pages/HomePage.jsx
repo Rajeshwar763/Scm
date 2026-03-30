@@ -20,10 +20,10 @@ const services = [
 ];
 
 const industries = [
-  { name: "Information Technology", img: "https://images.unsplash.com/photo-1569653402334-2e98fbaa80ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBJVCUyMHNvZnR3YXJlJTIwZW5naW5lZXJzJTIwd29ya2luZyUyMGNvbXB1dGVyc3xlbnwwfHx8fDE3NzQ4NjcwMzN8MA&ixlib=rb-4.1.0&q=85" },
+  { name: "Information Technology", img: "https://images.pexels.com/photos/5453842/pexels-photo-5453842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
   { name: "Manufacturing", img: "https://images.unsplash.com/photo-1742535036852-6a13b900bd48?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxJbmRpYW4lMjB3b3JrZm9yY2UlMjBza2lsbGVkJTIwd29ya2VycyUyMHRyYWluaW5nJTIwd29ya3Nob3B8ZW58MHx8fHwxNzc0ODY3MzEzfDA&ixlib=rb-4.1.0&q=85" },
-  { name: "Construction", img: "https://images.pexels.com/photos/32467382/pexels-photo-32467382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
-  { name: "Facility Management", img: "https://images.pexels.com/photos/9462636/pexels-photo-9462636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
+  { name: "Construction", img: "https://images.unsplash.com/photo-1577199001468-44c049e7603f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBjb25zdHJ1Y3Rpb24lMjB3b3JrZXJzJTIwaGVsbWV0cyUyMHNhZmV0eSUyMHZlc3RzJTIwYnVpbGRpbmclMjBzaXRlJTIwSW5kaWElMjBmYWNlc3xlbnwwfHx8fDE3NzQ4Njg5OTR8MA&ixlib=rb-4.1.0&q=85" },
+  { name: "Facility Management", img: "https://images.unsplash.com/photo-1664077857457-b9bded597e62?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjB3b21hbiUyMG1hbiUyMHN3ZWVwaW5nJTIwbW9wcGluZyUyMGZsb29yJTIwY2xlYW5pbmclMjB1bmlmb3JtJTIwZGFyayUyMHNraW4lMjBJbmRpYXxlbnwwfHx8fDE3NzQ4NjkwMjV8MA&ixlib=rb-4.1.0&q=85" },
 ];
 
 const testimonials = [

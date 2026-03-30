@@ -6,7 +6,7 @@ const industries = [
   {
     name: "Information Technology",
     tagline: "Powering India's Digital Transformation",
-    img: "https://images.unsplash.com/photo-1569653402334-2e98fbaa80ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBJVCUyMHNvZnR3YXJlJTIwZW5naW5lZXJzJTIwd29ya2luZyUyMGNvbXB1dGVyc3xlbnwwfHx8fDE3NzQ4NjcwMzN8MA&ixlib=rb-4.1.0&q=85",
+    img: "https://images.pexels.com/photos/5453842/pexels-photo-5453842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     desc: "We supply IT companies with developers, architects, testers, project managers, and technical leads across all major technology stacks and platforms.",
     roles: ["Software Engineers", "Cloud Architects", "Data Scientists", "DevOps Engineers", "QA Testers", "IT Project Managers"],
   },
@@ -20,21 +20,21 @@ const industries = [
   {
     name: "Construction",
     tagline: "Building India's Infrastructure",
-    img: "https://images.pexels.com/photos/32467382/pexels-photo-32467382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    img: "https://images.unsplash.com/photo-1577199001468-44c049e7603f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBjb25zdHJ1Y3Rpb24lMjB3b3JrZXJzJTIwaGVsbWV0cyUyMHNhZmV0eSUyMHZlc3RzJTIwYnVpbGRpbmclMjBzaXRlJTIwSW5kaWElMjBmYWNlc3xlbnwwfHx8fDE3NzQ4Njg5OTR8MA&ixlib=rb-4.1.0&q=85",
     desc: "We deploy reliable construction workers, site supervisors, and civil engineers for residential, commercial, and infrastructure projects of all scales.",
     roles: ["Civil Engineers", "Site Supervisors", "Masons & Carpenters", "Electricians & Plumbers", "Safety Supervisors", "Heavy Equipment Operators"],
   },
   {
     name: "Facility Management",
     tagline: "Keeping Workplaces Running Smoothly",
-    img: "https://images.pexels.com/photos/9462636/pexels-photo-9462636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    img: "https://images.unsplash.com/photo-1664077857457-b9bded597e62?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjB3b21hbiUyMG1hbiUyMHN3ZWVwaW5nJTIwbW9wcGluZyUyMGZsb29yJTIwY2xlYW5pbmclMjB1bmlmb3JtJTIwZGFyayUyMHNraW4lMjBJbmRpYXxlbnwwfHx8fDE3NzQ4NjkwMjV8MA&ixlib=rb-4.1.0&q=85",
     desc: "Our facility management staffing ensures offices, malls, hospitals, and industrial parks run efficiently with trained housekeeping, security, and maintenance teams.",
     roles: ["Housekeeping Staff", "Security Guards", "Maintenance Technicians", "Pantry Staff", "Front Desk Executives", "Facility Supervisors"],
   },
   {
     name: "International Staffing",
     tagline: "Taking Indian Talent to the World",
-    img: "https://images.unsplash.com/photo-1664651205193-bfb6bfdd3b09?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjB3b3JrZXJzJTIwY2FyZWVyJTIwam9iJTIwaW50ZXJ2aWV3JTIwaGlyaW5nJTIwSFJ8ZW58MHx8fHwxNzc0ODY3MDYzfDA&ixlib=rb-4.1.0&q=85",
+    img: "https://images.pexels.com/photos/6720251/pexels-photo-6720251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     desc: "SCM Group facilitates international placements for skilled Indian professionals seeking opportunities in the Gulf, Southeast Asia, and beyond.",
     roles: ["Gulf Placements", "Engineering & Technical Roles", "Healthcare Professionals", "Skilled Trade Workers", "Hospitality Staff", "Document & Visa Assistance"],
   },
