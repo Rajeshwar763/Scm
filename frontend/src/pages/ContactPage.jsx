@@ -54,8 +54,16 @@ export default function ContactPage() {
   return (
     <div className="font-body">
       {/* Banner */}
-      <section className="bg-gradient-to-r from-[#0F1C35] to-[#1E3A6E] pt-32 pb-20" data-testid="contact-banner">
-        <div className="container-max text-center">
+      <section className="relative pt-32 pb-20 overflow-hidden" data-testid="contact-banner">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/8127807/pexels-photo-8127807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#0F1C35]/87" />
+        </div>
+        <div className="container-max text-center relative z-10">
           <p className="text-[#E8622A] text-xs font-semibold uppercase tracking-widest mb-3">Get In Touch</p>
           <h1 className="font-heading text-4xl sm:text-5xl font-bold text-white mb-4">Contact Us</h1>
           <p className="text-gray-300 max-w-xl mx-auto">

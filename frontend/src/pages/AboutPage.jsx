@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Target, Eye, Heart, Shield, Users, Award, CheckCircle, ArrowRight } from "lucide-react";
 
-const TEAM_IMG = "https://images.pexels.com/photos/8127807/pexels-photo-8127807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+const TEAM_IMG = "https://images.unsplash.com/photo-1681164315051-add1906a9b07?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxJbmRpYW4lMjBkaXZlcnNlJTIwb2ZmaWNlJTIwdGVhbSUyMHdvcmtpbmclMjB0b2dldGhlciUyMGxhcHRvcCUyMGJyYWluc3Rvcm1pbmd8ZW58MHx8fHwxNzc0ODY3NjgyfDA&ixlib=rb-4.1.0&q=85";
 
 const values = [
   { icon: Shield, title: "Integrity", desc: "We operate with full transparency and ethical conduct in every client and candidate interaction." },
@@ -23,9 +23,17 @@ const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
 export default function AboutPage() {
   return (
     <div className="font-body">
-      {/* Page Banner */}
-      <section className="bg-gradient-to-r from-[#0F1C35] to-[#1E3A6E] pt-32 pb-20" data-testid="about-banner">
-        <div className="container-max text-center">
+      {/* Banner */}
+      <section className="relative pt-32 pb-20 overflow-hidden" data-testid="about-banner">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/12903133/pexels-photo-12903133.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#0F1C35]/85" />
+        </div>
+        <div className="container-max text-center relative z-10">
           <p className="text-[#E8622A] text-xs font-semibold uppercase tracking-widest mb-3">Our Story</p>
           <h1 className="font-heading text-4xl sm:text-5xl font-bold text-white mb-4">About SCM Group</h1>
           <p className="text-gray-300 max-w-xl mx-auto">

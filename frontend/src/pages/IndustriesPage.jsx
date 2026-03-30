@@ -13,14 +13,14 @@ const industries = [
   {
     name: "Manufacturing",
     tagline: "Skilled Hands for Production Excellence",
-    img: "https://images.pexels.com/photos/32845683/pexels-photo-32845683.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    img: "https://images.unsplash.com/photo-1742535036852-6a13b900bd48?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxJbmRpYW4lMjB3b3JrZm9yY2UlMjBza2lsbGVkJTIwd29ya2VycyUyMHRyYWluaW5nJTIwd29ya3Nob3B8ZW58MHx8fHwxNzc0ODY3MzEzfDA&ixlib=rb-4.1.0&q=85",
     desc: "From assembly line operators to quality control supervisors, we provide skilled manufacturing workforce solutions for plants across India.",
     roles: ["Machine Operators", "Quality Controllers", "Production Supervisors", "Maintenance Technicians", "Warehouse Staff", "Safety Officers"],
   },
   {
     name: "Construction",
     tagline: "Building India's Infrastructure",
-    img: "https://images.unsplash.com/photo-1630309904321-4f320230bced?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwzfHxJbmRpYSUyMGNvbnN0cnVjdGlvbiUyMHNpdGUlMjB3b3JrZXJzJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzc0ODY3MDM1fDA&ixlib=rb-4.1.0&q=85",
+    img: "https://images.pexels.com/photos/32467382/pexels-photo-32467382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     desc: "We deploy reliable construction workers, site supervisors, and civil engineers for residential, commercial, and infrastructure projects of all scales.",
     roles: ["Civil Engineers", "Site Supervisors", "Masons & Carpenters", "Electricians & Plumbers", "Safety Supervisors", "Heavy Equipment Operators"],
   },
@@ -44,8 +44,16 @@ export default function IndustriesPage() {
   return (
     <div className="font-body">
       {/* Banner */}
-      <section className="bg-gradient-to-r from-[#0F1C35] to-[#1E3A6E] pt-32 pb-20" data-testid="industries-banner">
-        <div className="container-max text-center">
+      <section className="relative pt-32 pb-20 overflow-hidden" data-testid="industries-banner">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/32467382/pexels-photo-32467382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#0F1C35]/85" />
+        </div>
+        <div className="container-max text-center relative z-10">
           <p className="text-[#E8622A] text-xs font-semibold uppercase tracking-widest mb-3">Sectors We Power</p>
           <h1 className="font-heading text-4xl sm:text-5xl font-bold text-white mb-4">Industries We Serve</h1>
           <p className="text-gray-300 max-w-xl mx-auto">

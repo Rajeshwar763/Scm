@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Users, Briefcase, TrendingUp, Shield, FileText, Clock, CheckCircle, ArrowRight } from "lucide-react";
+import { Users, Briefcase, TrendingUp, Shield, FileText, CheckCircle, ArrowRight } from "lucide-react";
 
 const services = [
   {
     icon: Users,
     title: "IT Staffing",
     tagline: "The Right Tech Talent, Right When You Need It",
+    img: "https://images.pexels.com/photos/6804068/pexels-photo-6804068.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     desc: "We specialize in sourcing, screening, and placing top-tier IT professionals — from software engineers and cloud architects to data scientists and DevOps engineers — with precision and speed.",
     features: [
       "Contract, contract-to-hire, and permanent placements",
       "Specialized skills: Java, Python, .NET, Cloud, AI/ML",
       "Background and reference verification",
-      "Rapid turnaround — profiles in 48-72 hours",
+      "Rapid turnaround — profiles in 48–72 hours",
     ],
     color: "bg-blue-50",
     iconColor: "text-[#1E3A6E]",
@@ -22,6 +23,7 @@ const services = [
     icon: Briefcase,
     title: "Manpower Supply",
     tagline: "Skilled Workers for Every Demand",
+    img: "https://images.unsplash.com/photo-1628147529780-36964fbb8d54?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjB3b3JrZm9yY2UlMjBza2lsbGVkJTIwd29ya2VycyUyMHRyYWluaW5nJTIwd29ya3Nob3B8ZW58MHx8fHwxNzc0ODY3MzEzfDA&ixlib=rb-4.1.0&q=85",
     desc: "We provide reliable, job-ready manpower for manufacturing plants, construction sites, and facility operations. Our workers are vetted, trained, and compliant with all statutory requirements.",
     features: [
       "Skilled, semi-skilled, and unskilled categories",
@@ -37,6 +39,7 @@ const services = [
     icon: TrendingUp,
     title: "RPO – Recruitment Process Outsourcing",
     tagline: "Outsource Your Recruitment, Not Your Standards",
+    img: "https://images.pexels.com/photos/5439143/pexels-photo-5439143.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     desc: "Our RPO service takes full ownership of your hiring pipeline — from job requisition to onboarding — freeing your HR team to focus on strategic initiatives while we fill positions faster and at lower cost.",
     features: [
       "End-to-end or partial RPO models available",
@@ -52,6 +55,7 @@ const services = [
     icon: Shield,
     title: "Payroll Management",
     tagline: "Accurate, Compliant, and Hassle-Free",
+    img: "https://images.unsplash.com/photo-1565372594646-7e38ab4547c4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwxfHxJbmRpYSUyMHBheXJvbGwlMjBzYWxhcnklMjBmaW5hbmNlJTIwYWNjb3VudGluZyUyMG9mZmljZXxlbnwwfHx8fDE3NzQ4NjczMTV8MA&ixlib=rb-4.1.0&q=85",
     desc: "Managing payroll in India is complex — from PF, ESI, and TDS to gratuity and leave encashment. SCM Group's payroll service ensures 100% compliance with Indian labor laws so you can focus on your business.",
     features: [
       "Monthly salary processing and disbursement",
@@ -67,6 +71,7 @@ const services = [
     icon: FileText,
     title: "Contract Staffing",
     tagline: "Flexible Workforce for Project-Based Needs",
+    img: "https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     desc: "Get the agility you need with our contract staffing solutions. Hire skilled professionals for specific projects or fixed durations without the long-term commitment, keeping your workforce lean and efficient.",
     features: [
       "Short-term and long-term contracts",
@@ -80,14 +85,20 @@ const services = [
   },
 ];
 
-const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
-
 export default function ServicesPage() {
   return (
     <div className="font-body">
       {/* Banner */}
-      <section className="bg-gradient-to-r from-[#0F1C35] to-[#1E3A6E] pt-32 pb-20" data-testid="services-banner">
-        <div className="container-max text-center">
+      <section className="relative pt-32 pb-20 overflow-hidden" data-testid="services-banner">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/6804068/pexels-photo-6804068.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#0F1C35]/85" />
+        </div>
+        <div className="container-max text-center relative z-10">
           <p className="text-[#E8622A] text-xs font-semibold uppercase tracking-widest mb-3">What We Offer</p>
           <h1 className="font-heading text-4xl sm:text-5xl font-bold text-white mb-4">Our Services</h1>
           <p className="text-gray-300 max-w-xl mx-auto">
@@ -107,20 +118,33 @@ export default function ServicesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.05 }}
               data-testid={`service-detail-${s.title.replace(/\s+/g, '-').toLowerCase()}`}
-              className={`bg-white rounded-2xl border-l-4 ${s.borderColor} shadow-sm hover:shadow-md transition-shadow p-8 md:p-10`}
+              className={`bg-white rounded-2xl border-l-4 ${s.borderColor} shadow-sm hover:shadow-md transition-shadow overflow-hidden`}
             >
-              <div className="flex flex-col md:flex-row gap-8">
-                <div className={`w-16 h-16 ${s.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
-                  <s.icon size={30} className={s.iconColor} />
+              <div className="flex flex-col md:flex-row">
+                {/* Image */}
+                <div className={`w-full md:w-72 h-56 md:h-auto flex-shrink-0 ${i % 2 !== 0 ? "md:order-2" : ""}`}>
+                  <img
+                    src={s.img}
+                    alt={s.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="flex-1">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">{s.tagline}</p>
-                  <h2 className="font-heading text-2xl font-bold text-[#1E3A6E] mb-4">{s.title}</h2>
-                  <p className="text-gray-600 leading-relaxed mb-6">{s.desc}</p>
+                {/* Content */}
+                <div className={`p-8 md:p-10 flex-1 ${i % 2 !== 0 ? "md:order-1" : ""}`}>
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className={`w-12 h-12 ${s.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                      <s.icon size={24} className={s.iconColor} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">{s.tagline}</p>
+                      <h2 className="font-heading text-xl font-bold text-[#1E3A6E]">{s.title}</h2>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed mb-6 text-sm">{s.desc}</p>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {s.features.map((f) => (
                       <li key={f} className="flex items-start gap-2.5 text-sm text-gray-700">
-                        <CheckCircle size={16} className="text-[#E8622A] mt-0.5 flex-shrink-0" />
+                        <CheckCircle size={15} className="text-[#E8622A] mt-0.5 flex-shrink-0" />
                         {f}
                       </li>
                     ))}

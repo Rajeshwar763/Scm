@@ -235,8 +235,16 @@ export default function CareersPage() {
   return (
     <div className="font-body">
       {/* Banner */}
-      <section className="bg-gradient-to-r from-[#0F1C35] to-[#1E3A6E] pt-32 pb-20" data-testid="careers-banner">
-        <div className="container-max text-center">
+      <section className="relative pt-32 pb-20 overflow-hidden" data-testid="careers-banner">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1569653402334-2e98fbaa80ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBJVCUyMHNvZnR3YXJlJTIwZW5naW5lZXJzJTIwd29ya2luZyUyMGNvbXB1dGVyc3xlbnwwfHx8fDE3NzQ4NjcwMzN8MA&ixlib=rb-4.1.0&q=85"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#0F1C35]/88" />
+        </div>
+        <div className="container-max text-center relative z-10">
           <p className="text-[#E8622A] text-xs font-semibold uppercase tracking-widest mb-3">Join Our Team</p>
           <h1 className="font-heading text-4xl sm:text-5xl font-bold text-white mb-4">Careers at SCM Group</h1>
           <p className="text-gray-300 max-w-xl mx-auto">

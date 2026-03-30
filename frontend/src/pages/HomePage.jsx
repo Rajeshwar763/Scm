@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Users, Briefcase, Award, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Shield, Clock } from "lucide-react";
 
 const HERO_IMG = "https://images.pexels.com/photos/7580750/pexels-photo-7580750.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
-const ABOUT_IMG = "https://images.pexels.com/photos/8127807/pexels-photo-8127807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+const ABOUT_IMG = "https://images.unsplash.com/photo-1628495073765-e7fdbb7c25fc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBkaXZlcnNlJTIwb2ZmaWNlJTIwdGVhbSUyMHdvcmtpbmclMjB0b2dldGhlciUyMGxhcHRvcCUyMGJyYWluc3Rvcm1pbmd8ZW58MHx8fHwxNzc0ODY3NjgyfDA&ixlib=rb-4.1.0&q=85";
 
 const stats = [
   { value: "500+", label: "Successful Placements", icon: Users },
@@ -21,8 +21,8 @@ const services = [
 
 const industries = [
   { name: "Information Technology", img: "https://images.unsplash.com/photo-1569653402334-2e98fbaa80ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBJVCUyMHNvZnR3YXJlJTIwZW5naW5lZXJzJTIwd29ya2luZyUyMGNvbXB1dGVyc3xlbnwwfHx8fDE3NzQ4NjcwMzN8MA&ixlib=rb-4.1.0&q=85" },
-  { name: "Manufacturing", img: "https://images.pexels.com/photos/32845683/pexels-photo-32845683.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
-  { name: "Construction", img: "https://images.unsplash.com/photo-1630309904321-4f320230bced?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwzfHxJbmRpYSUyMGNvbnN0cnVjdGlvbiUyMHNpdGUlMjB3b3JrZXJzJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzc0ODY3MDM1fDA&ixlib=rb-4.1.0&q=85" },
+  { name: "Manufacturing", img: "https://images.unsplash.com/photo-1742535036852-6a13b900bd48?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxJbmRpYW4lMjB3b3JrZm9yY2UlMjBza2lsbGVkJTIwd29ya2VycyUyMHRyYWluaW5nJTIwd29ya3Nob3B8ZW58MHx8fHwxNzc0ODY3MzEzfDA&ixlib=rb-4.1.0&q=85" },
+  { name: "Construction", img: "https://images.pexels.com/photos/32467382/pexels-photo-32467382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
   { name: "Facility Management", img: "https://images.pexels.com/photos/9462636/pexels-photo-9462636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
 ];
 
