@@ -238,11 +238,11 @@ export default function CareersPage() {
       <section className="relative pt-32 pb-20 overflow-hidden" data-testid="careers-banner">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1569653402334-2e98fbaa80ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBJVCUyMHNvZnR3YXJlJTIwZW5naW5lZXJzJTIwd29ya2luZyUyMGNvbXB1dGVyc3xlbnwwfHx8fDE3NzQ4NjcwMzN8MA&ixlib=rb-4.1.0&q=85"
+            src="https://images.unsplash.com/photo-1627599936744-51d288f89af4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwyfHxJbmRpYW4lMjBvZmZpY2UlMjB0ZWFtJTIwZ3JvdXAlMjBzbWlsaW5nJTIwd2lkZSUyMHNob3QlMjBwYW5vcmFtaWMlMjBtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBwcm9mZXNzaW9uYWxzfGVufDB8fHx8MTc3NDg2OTYzNXww&ixlib=rb-4.1.0&q=85"
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-[#0F1C35]/88" />
+          <div className="absolute inset-0 bg-[#0F1C35]/75" />
         </div>
         <div className="container-max text-center relative z-10">
           <p className="text-[#E8622A] text-xs font-semibold uppercase tracking-widest mb-3">Join Our Team</p>
