@@ -80,7 +80,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={15} className="text-[#E8622A] mt-0.5 flex-shrink-0" />
                 <span className="text-gray-400 text-sm leading-relaxed">
-                  H.no.4-106, Pragathi Nagar, Moosapet, Balanagar, Rangareddy, Telangana 500018
+                  12-4-160, Pragathi Nagar, Moosapet, Kukatpally, Hyderabad 500018
                 </span>
               </li>
               <li className="flex items-center gap-3">

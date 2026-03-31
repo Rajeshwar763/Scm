@@ -14,7 +14,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Our Office",
-    lines: ["H.no.4-106, Pragathi Nagar,", "Moosapet, Balanagar, Rangareddy,", "Telangana 500018"],
+    lines: ["12-4-160, Pragathi Nagar,", "Moosapet, Kukatpally,", "Hyderabad 500018"],
   },
   {
     icon: Phone,
@@ -60,8 +60,8 @@ export default function ContactPage() {
     <div className="font-body">
       <SEO
         title="Contact Us | Manpower Agency Hyderabad | +91 81435 97569"
-        description="Contact SCM Group Management Services for IT staffing, manpower supply, and HR solutions in Hyderabad. Call +91 81435 97569 or email info@scmgroup-services.com. Located in Moosapet, Hyderabad."
-        keywords="contact SCM Group, staffing agency Hyderabad contact, manpower agency phone number, IT staffing contact Hyderabad, SCM Group Moosapet Hyderabad, manpower agency Telangana contact"
+        description="Contact SCM Group Management Services for IT staffing, manpower supply, and HR solutions in Hyderabad. Call +91 81435 97569 or email info@scmgroup-services.com. Located in Kukatpally, Hyderabad."
+        keywords="contact SCM Group, staffing agency Hyderabad contact, manpower agency phone number, IT staffing contact Hyderabad, SCM Group Kukatpally Hyderabad, manpower agency Telangana contact"
       />
       {/* Banner */}
       <section className="relative pt-32 pb-20 overflow-hidden" data-testid="contact-banner">
@@ -173,12 +173,12 @@ export default function ContactPage() {
                   <h3 className="font-heading font-bold text-[#1E3A6E] flex items-center gap-2">
                     <MapPin size={18} className="text-[#E8622A]" /> Our Location
                   </h3>
-                  <p className="text-gray-500 text-sm mt-1">H.no.4-106, Pragathi Nagar, Moosapet, Balanagar, Rangareddy, Telangana 500018</p>
+                  <p className="text-gray-500 text-sm mt-1">12-4-160, Pragathi Nagar, Moosapet, Kukatpally, Hyderabad 500018</p>
                 </div>
                 <div data-testid="google-map-embed">
                   <iframe
                     title="SCM Group Office Location"
-                    src="https://maps.google.com/maps?q=Pragathi+Nagar+Moosapet+Balanagar+Hyderabad+Telangana+500018&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    src="https://maps.google.com/maps?q=12-4-160+Pragathi+Nagar+Moosapet+Kukatpally+Hyderabad+500018&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     width="100%"
                     height="320"
                     style={{ border: 0 }}
