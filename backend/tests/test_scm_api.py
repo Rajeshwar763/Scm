@@ -26,7 +26,7 @@ class TestContact:
         r = requests.post(f"{BASE_URL}/api/contact", json=payload)
         assert r.status_code == 200
         data = r.json()
-        assert data["success"] is True
+        assert data["success"]
 
     def test_contact_missing_required(self):
         # Missing message field
@@ -53,7 +53,7 @@ class TestCareers:
         r = requests.post(f"{BASE_URL}/api/careers/apply", data=data)
         assert r.status_code == 200
         resp = r.json()
-        assert resp["success"] is True
+        assert resp["success"]
 
     def test_career_application_missing_required(self):
         # Missing email

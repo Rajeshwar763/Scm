@@ -279,7 +279,7 @@ export default function HomePage() {
               >
                 <div className="flex gap-1 mb-4">
                   {Array(t.rating).fill(0).map((_, j) => (
-                    <Star key={j} size={16} className="text-[#E8622A] fill-[#E8622A]" />
+                    <Star key={`star-${j}`} size={16} className="text-[#E8622A] fill-[#E8622A]" />
                   ))}
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6 italic">"{t.text}"</p>

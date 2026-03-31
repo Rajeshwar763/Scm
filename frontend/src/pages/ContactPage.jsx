@@ -88,8 +88,8 @@ export default function ContactPage() {
                   <item.icon size={20} className="text-[#E8622A]" />
                 </div>
                 <h3 className="font-heading font-bold text-[#1E3A6E] mb-3 text-sm">{item.title}</h3>
-                {item.lines.map((line, i) => (
-                  <p key={i} className="text-gray-500 text-sm leading-relaxed">{line}</p>
+                {item.lines.map((line) => (
+                  <p key={line} className="text-gray-500 text-sm leading-relaxed">{line}</p>
                 ))}
               </motion.div>
             ))}
