@@ -24,6 +24,8 @@ const leadership = [
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
 const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
+const staggerView = { variants: stagger, initial: "hidden", whileInView: "visible", viewport: { once: true } };
+const T06 = { duration: 0.6 };
 
 // whileInView animation presets
 const wvFadeUp = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
@@ -65,7 +67,7 @@ export default function AboutPage() {
             <motion.div {...wvSlideLeftStrong}>
               <img src={TEAM_IMG} alt="SCM Group Team" className="w-full h-[440px] object-cover rounded-2xl shadow-xl" />
             </motion.div>
-            <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <motion.div {...staggerView}>
               <motion.p variants={fadeUp} className="text-label mb-3">Our Company</motion.p>
               <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E] mb-6">
                 Empowering Businesses Through People
@@ -102,7 +104,7 @@ export default function AboutPage() {
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">Mission &amp; Vision</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div {...wvSlideLeft} transition={{ duration: 0.6 }} data-testid="mission-card" className="bg-white p-10 rounded-2xl border-l-4 border-[#E8622A] shadow-sm">
+            <motion.div {...wvSlideLeft} transition={T06} data-testid="mission-card" className="bg-white p-10 rounded-2xl border-l-4 border-[#E8622A] shadow-sm">
               <div className="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center mb-6">
                 <Target size={28} className="text-[#E8622A]" />
               </div>
@@ -111,7 +113,7 @@ export default function AboutPage() {
                 To provide reliable, efficient, and compliant manpower solutions that empower businesses to focus on growth while we handle their most critical resource — people. We aim to be the go-to staffing partner for every organization in India.
               </p>
             </motion.div>
-            <motion.div {...wvSlideRight} transition={{ duration: 0.6 }} data-testid="vision-card" className="bg-white p-10 rounded-2xl border-l-4 border-[#1E3A6E] shadow-sm">
+            <motion.div {...wvSlideRight} transition={T06} data-testid="vision-card" className="bg-white p-10 rounded-2xl border-l-4 border-[#1E3A6E] shadow-sm">
               <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
                 <Eye size={28} className="text-[#1E3A6E]" />
               </div>
@@ -131,7 +133,7 @@ export default function AboutPage() {
             <p className="text-label mb-3">What Drives Us</p>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">Our Core Values</h2>
           </motion.div>
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <motion.div {...staggerView} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, i) => (
               <motion.div key={v.title} variants={fadeUp} data-testid={`value-card-${v.title.toLowerCase()}`} className="text-center p-8 rounded-xl bg-[#F8FAFC] border border-gray-100 hover:-translate-y-1 hover:shadow-md transition-all duration-300">
                 <div className={`w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5 ${i % 2 === 0 ? "bg-orange-100" : "bg-blue-100"}`}>
@@ -152,7 +154,7 @@ export default function AboutPage() {
             <p className="text-label mb-3">Meet the Founder</p>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">Our Leadership</h2>
           </motion.div>
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="flex justify-center">
+          <motion.div {...staggerView} className="flex justify-center">
             {leadership.map((l, i) => (
               <motion.div key={l.name} variants={fadeUp} data-testid={`leader-card-${i}`} className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-shadow text-center p-10 max-w-lg w-full">
                 <div className="w-36 h-36 rounded-full overflow-hidden mx-auto mb-6 ring-4 ring-[#E8622A]/30 shadow-lg">

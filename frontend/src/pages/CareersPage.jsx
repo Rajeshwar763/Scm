@@ -8,6 +8,8 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 const fadeUp = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
 
+const T04 = { duration: 0.4 };
+
 const jobs = [
   {
     id: 1,
@@ -289,7 +291,7 @@ export default function CareersPage() {
           </motion.div>
           <div className="space-y-4">
             {jobs.map((job) => (
-              <motion.div key={job.id} {...fadeUp} transition={{ duration: 0.4 }}>
+              <motion.div key={job.id} {...fadeUp} transition={T04}>
                 <JobCard job={job} />
               </motion.div>
             ))}

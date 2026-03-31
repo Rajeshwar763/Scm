@@ -36,6 +36,7 @@ const testimonials = [
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
 const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
+const staggerView = { variants: stagger, initial: "hidden", whileInView: "visible", viewport: { once: true } };
 const heroAnim = { initial: { opacity: 0, y: 40 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.8 } };
 const ctaAnim = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
 const statAnim = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
@@ -153,7 +154,7 @@ export default function HomePage() {
       <section className="section-padding bg-white" data-testid="about-intro-section">
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <motion.div {...staggerView}>
               <motion.p variants={fadeUp} className="text-label mb-3">Who We Are</motion.p>
               <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E] leading-tight mb-6">
                 Building Workforce Solutions That Matter
@@ -192,7 +193,7 @@ export default function HomePage() {
       {/* Services */}
       <section className="section-padding bg-[#F8FAFC]" data-testid="services-section">
         <div className="container-max">
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
+          <motion.div {...staggerView} className="text-center mb-14">
             <motion.p variants={fadeUp} className="text-label mb-3">What We Do</motion.p>
             <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">
               Comprehensive Workforce Solutions
@@ -201,7 +202,7 @@ export default function HomePage() {
               From IT staffing to payroll management, we offer a complete suite of HR and manpower services tailored to your business needs.
             </motion.p>
           </motion.div>
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <motion.div {...staggerView} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s) => (
               <motion.div
                 key={s.title}
@@ -231,11 +232,11 @@ export default function HomePage() {
       {/* Industries */}
       <section className="section-padding bg-white" data-testid="industries-section">
         <div className="container-max">
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
+          <motion.div {...staggerView} className="text-center mb-14">
             <motion.p variants={fadeUp} className="text-label mb-3">Sectors We Power</motion.p>
             <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">Industries We Serve</motion.h2>
           </motion.div>
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <motion.div {...staggerView} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((ind) => (
               <motion.div
                 key={ind.name}
@@ -262,11 +263,11 @@ export default function HomePage() {
       {/* Testimonials */}
       <section className="section-padding bg-[#F8FAFC]" data-testid="testimonials-section">
         <div className="container-max">
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
+          <motion.div {...staggerView} className="text-center mb-14">
             <motion.p variants={fadeUp} className="text-label mb-3">Client Success</motion.p>
             <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">What Our Clients Say</motion.h2>
           </motion.div>
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div {...staggerView} className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
               <motion.div
                 key={t.name}
@@ -293,7 +294,7 @@ export default function HomePage() {
       {/* Partners Strip */}
       <section className="section-padding bg-white" data-testid="partners-strip-section">
         <div className="container-max">
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-10">
+          <motion.div {...staggerView} className="text-center mb-10">
             <motion.p variants={fadeUp} className="text-label mb-3">Strategic Alliances</motion.p>
             <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">Our Partner Network</motion.h2>
             <motion.p variants={fadeUp} className="text-gray-600 mt-4 max-w-xl mx-auto">
