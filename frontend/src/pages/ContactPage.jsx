@@ -6,6 +6,10 @@ import SEO from "../components/SEO";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
+const fadeUp = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
+const slideLeft = { initial: { opacity: 0, x: -20 }, whileInView: { opacity: 1, x: 0 }, viewport: { once: true } };
+const slideRight = { initial: { opacity: 0, x: 20 }, whileInView: { opacity: 1, x: 0 }, viewport: { once: true } };
+
 const contactInfo = [
   {
     icon: MapPin,
@@ -83,7 +87,7 @@ export default function ContactPage() {
         <div className="container-max">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((item) => (
-              <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} data-testid={`contact-card-${item.title.replace(/\s+/g, '-').toLowerCase()}`} className="bg-[#F8FAFC] p-6 rounded-xl border border-gray-100">
+              <motion.div key={item.title} {...fadeUp} data-testid={`contact-card-${item.title.replace(/\s+/g, '-').toLowerCase()}`} className="bg-[#F8FAFC] p-6 rounded-xl border border-gray-100">
                 <div className="w-11 h-11 bg-[#E8622A]/10 rounded-lg flex items-center justify-center mb-4">
                   <item.icon size={20} className="text-[#E8622A]" />
                 </div>
@@ -102,7 +106,7 @@ export default function ContactPage() {
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Form */}
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+            <motion.div {...slideLeft} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
               <p className="text-label mb-2">Send a Message</p>
               <h2 className="font-heading text-2xl font-bold text-[#1E3A6E] mb-6">How Can We Help?</h2>
 
@@ -163,7 +167,7 @@ export default function ContactPage() {
             </motion.div>
 
             {/* Map + Info */}
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-6">
+            <motion.div {...slideRight} className="space-y-6">
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
                 <div className="p-6 border-b border-gray-100">
                   <h3 className="font-heading font-bold text-[#1E3A6E] flex items-center gap-2">

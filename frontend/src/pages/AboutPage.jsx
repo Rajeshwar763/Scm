@@ -25,6 +25,11 @@ const leadership = [
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
 const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
 
+// whileInView animation presets
+const wvFadeUp = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
+const wvSlideLeft = { initial: { opacity: 0, x: -20 }, whileInView: { opacity: 1, x: 0 }, viewport: { once: true } };
+const wvSlideRight = { initial: { opacity: 0, x: 20 }, whileInView: { opacity: 1, x: 0 }, viewport: { once: true } };
+
 export default function AboutPage() {
   return (
     <div className="font-body">
@@ -91,12 +96,12 @@ export default function AboutPage() {
       {/* Mission & Vision */}
       <section className="section-padding bg-[#F8FAFC]" data-testid="mission-vision">
         <div className="container-max">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
+          <motion.div {...wvFadeUp} className="text-center mb-14">
             <p className="text-label mb-3">Our Purpose</p>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">Mission &amp; Vision</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} data-testid="mission-card" className="bg-white p-10 rounded-2xl border-l-4 border-[#E8622A] shadow-sm">
+            <motion.div {...wvSlideLeft} transition={{ duration: 0.6 }} data-testid="mission-card" className="bg-white p-10 rounded-2xl border-l-4 border-[#E8622A] shadow-sm">
               <div className="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center mb-6">
                 <Target size={28} className="text-[#E8622A]" />
               </div>
@@ -105,7 +110,7 @@ export default function AboutPage() {
                 To provide reliable, efficient, and compliant manpower solutions that empower businesses to focus on growth while we handle their most critical resource — people. We aim to be the go-to staffing partner for every organization in India.
               </p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} data-testid="vision-card" className="bg-white p-10 rounded-2xl border-l-4 border-[#1E3A6E] shadow-sm">
+            <motion.div {...wvSlideRight} transition={{ duration: 0.6 }} data-testid="vision-card" className="bg-white p-10 rounded-2xl border-l-4 border-[#1E3A6E] shadow-sm">
               <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
                 <Eye size={28} className="text-[#1E3A6E]" />
               </div>
@@ -121,7 +126,7 @@ export default function AboutPage() {
       {/* Core Values */}
       <section className="section-padding bg-white" data-testid="core-values">
         <div className="container-max">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
+          <motion.div {...wvFadeUp} className="text-center mb-14">
             <p className="text-label mb-3">What Drives Us</p>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">Our Core Values</h2>
           </motion.div>
@@ -142,7 +147,7 @@ export default function AboutPage() {
       {/* Leadership */}
       <section className="section-padding bg-[#F8FAFC]" data-testid="leadership-section">
         <div className="container-max">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
+          <motion.div {...wvFadeUp} className="text-center mb-14">
             <p className="text-label mb-3">Meet the Founder</p>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">Our Leadership</h2>
           </motion.div>

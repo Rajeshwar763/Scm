@@ -6,6 +6,8 @@ import SEO from "../components/SEO";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
+const fadeUp = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
+
 const jobs = [
   {
     id: 1,
@@ -281,13 +283,13 @@ export default function CareersPage() {
       {/* Job Listings */}
       <section className="section-padding bg-[#F8FAFC]" data-testid="job-listings-section">
         <div className="container-max">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-10">
+          <motion.div {...fadeUp} className="mb-10">
             <p className="text-label mb-2">Current Openings</p>
             <h2 className="font-heading text-3xl font-bold text-[#1E3A6E]">Open Positions ({jobs.length})</h2>
           </motion.div>
           <div className="space-y-4">
             {jobs.map((job) => (
-              <motion.div key={job.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4 }}>
+              <motion.div key={job.id} {...fadeUp} transition={{ duration: 0.4 }}>
                 <JobCard job={job} />
               </motion.div>
             ))}

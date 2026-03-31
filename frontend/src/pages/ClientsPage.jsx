@@ -171,6 +171,8 @@ function ClientLogo({ name }) {
   );
 }
 
+const pageAnim = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
+
 export default function ClientsPage() {
   return (
     <div className="font-body">
@@ -203,7 +205,7 @@ export default function ClientsPage() {
         <div className="container-max">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {stats.map((s, i) => (
-              <motion.div key={s.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} data-testid={`client-stat-${i}`}>
+              <motion.div key={s.label} {...pageAnim} transition={{ delay: i * 0.1 }} data-testid={`client-stat-${i}`}>
                 <p className="text-3xl lg:text-4xl font-bold text-white font-heading">{s.value}</p>
                 <p className="text-orange-100 text-sm mt-1">{s.label}</p>
               </motion.div>
@@ -234,7 +236,7 @@ export default function ClientsPage() {
       {/* Industries Supported */}
       <section className="section-padding bg-white" data-testid="industries-supported-section">
         <div className="container-max">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <motion.div {...pageAnim} className="text-center mb-12">
             <p className="text-label mb-3">Sector Coverage</p>
             <h2 className="font-heading text-3xl font-bold text-[#1E3A6E]">Industries We Support</h2>
           </motion.div>
@@ -260,13 +262,13 @@ export default function ClientsPage() {
       {/* Testimonials */}
       <section className="section-padding bg-[#F8FAFC]" data-testid="client-testimonials-section">
         <div className="container-max">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <motion.div {...pageAnim} className="text-center mb-12">
             <p className="text-label mb-3">Client Feedback</p>
             <h2 className="font-heading text-3xl font-bold text-[#1E3A6E]">What Our Clients Say</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
-              <motion.div key={t.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} data-testid={`client-testimonial-${i}`} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+              <motion.div key={t.name} {...pageAnim} transition={{ delay: i * 0.1 }} data-testid={`client-testimonial-${i}`} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
                 <div className="w-10 h-10 bg-[#E8622A]/10 rounded-full flex items-center justify-center mb-4">
                   <span className="text-[#E8622A] font-bold font-heading">{t.name.charAt(0)}</span>
                 </div>
@@ -282,7 +284,7 @@ export default function ClientsPage() {
       {/* Partners */}
       <section className="section-padding bg-white" data-testid="partners-section">
         <div className="container-max">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
+          <motion.div {...pageAnim} className="text-center mb-14">
             <p className="text-label mb-3">Strategic Alliances</p>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">Our Partner Network</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
@@ -300,7 +302,7 @@ export default function ClientsPage() {
       {/* CTA */}
       <section className="bg-[#1E3A6E] py-20" data-testid="clients-cta">
         <div className="container-max text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <motion.div {...pageAnim}>
             <h2 className="font-heading text-3xl font-bold text-white mb-4">Become Our Next Success Story</h2>
             <p className="text-white/70 mb-8 max-w-lg mx-auto">Partner with SCM Group and experience staffing solutions that truly deliver results.</p>
             <Link to="/contact" data-testid="clients-contact-cta" className="inline-flex items-center gap-2 bg-[#E8622A] text-white px-8 py-3.5 rounded-md font-semibold hover:bg-[#D05625] transition-all hover:scale-105">
