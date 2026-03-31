@@ -295,7 +295,7 @@ export default function CareersPage() {
           <h2 className="font-heading text-2xl font-bold text-white mb-3">Don't See the Right Role?</h2>
           <p className="text-white/70 mb-6 max-w-lg mx-auto">Send us your resume anyway. We're always looking for exceptional talent to join our growing team.</p>
           <a
-            href="mailto:careers@scmgroup.in"
+            href="mailto:info@scmgroup-services.com"
             data-testid="general-apply-email"
             className="inline-flex items-center gap-2 bg-[#E8622A] text-white px-8 py-3.5 rounded-md font-semibold hover:bg-[#D05625] transition-colors"
           >

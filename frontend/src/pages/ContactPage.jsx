@@ -14,12 +14,12 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    lines: ["+91 90000 12345", "+91 40 4567 8900"],
+    lines: ["+91 81435 97569 (Office)", "+91 77804 47171 (Personal)"],
   },
   {
     icon: Mail,
     title: "Email Us",
-    lines: ["info@scmgroup.in", "careers@scmgroup.in"],
+    lines: ["info@scmgroup-services.com", "SCM@scmgroup-services.com"],
   },
   {
     icon: Clock,
@@ -183,11 +183,17 @@ export default function ContactPage() {
                 <h3 className="font-heading font-bold text-white text-lg mb-2">Quick Response Guaranteed</h3>
                 <p className="text-white/70 text-sm mb-5">We respond to all inquiries within 24 business hours. For urgent manpower requirements, please call us directly.</p>
                 <div className="space-y-3">
-                  <a href="tel:+919000012345" data-testid="contact-phone-link" className="flex items-center gap-3 text-white/80 hover:text-[#E8622A] transition-colors text-sm">
-                    <Phone size={15} className="text-[#E8622A]" /> +91 90000 12345
+                  <a href="tel:+918143597569" data-testid="contact-phone-link" className="flex items-center gap-3 text-white/80 hover:text-[#E8622A] transition-colors text-sm">
+                    <Phone size={15} className="text-[#E8622A]" /> +91 81435 97569 (Office)
                   </a>
-                  <a href="mailto:info@scmgroup.in" data-testid="contact-email-link" className="flex items-center gap-3 text-white/80 hover:text-[#E8622A] transition-colors text-sm">
-                    <Mail size={15} className="text-[#E8622A]" /> info@scmgroup.in
+                  <a href="tel:+917780447171" className="flex items-center gap-3 text-white/80 hover:text-[#E8622A] transition-colors text-sm">
+                    <Phone size={15} className="text-[#E8622A]" /> +91 77804 47171 (Personal)
+                  </a>
+                  <a href="mailto:info@scmgroup-services.com" data-testid="contact-email-link" className="flex items-center gap-3 text-white/80 hover:text-[#E8622A] transition-colors text-sm">
+                    <Mail size={15} className="text-[#E8622A]" /> info@scmgroup-services.com
+                  </a>
+                  <a href="mailto:SCM@scmgroup-services.com" className="flex items-center gap-3 text-white/80 hover:text-[#E8622A] transition-colors text-sm">
+                    <Mail size={15} className="text-[#E8622A]" /> SCM@scmgroup-services.com
                   </a>
                 </div>
               </div>

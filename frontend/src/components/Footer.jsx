@@ -85,14 +85,26 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={15} className="text-[#E8622A] flex-shrink-0" />
-                <a href="tel:+919000012345" className="text-gray-400 hover:text-[#E8622A] text-sm transition-colors" data-testid="footer-phone">
-                  +91 90000 12345
+                <a href="tel:+918143597569" className="text-gray-400 hover:text-[#E8622A] text-sm transition-colors" data-testid="footer-phone">
+                  +91 81435 97569 (Office)
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone size={15} className="text-[#E8622A] flex-shrink-0" />
+                <a href="tel:+917780447171" className="text-gray-400 hover:text-[#E8622A] text-sm transition-colors">
+                  +91 77804 47171 (Personal)
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={15} className="text-[#E8622A] flex-shrink-0" />
-                <a href="mailto:info@scmgroup.in" className="text-gray-400 hover:text-[#E8622A] text-sm transition-colors" data-testid="footer-email">
-                  info@scmgroup.in
+                <a href="mailto:info@scmgroup-services.com" className="text-gray-400 hover:text-[#E8622A] text-sm transition-colors" data-testid="footer-email">
+                  info@scmgroup-services.com
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail size={15} className="text-[#E8622A] flex-shrink-0" />
+                <a href="mailto:SCM@scmgroup-services.com" className="text-gray-400 hover:text-[#E8622A] text-sm transition-colors">
+                  SCM@scmgroup-services.com
                 </a>
               </li>
             </ul>
