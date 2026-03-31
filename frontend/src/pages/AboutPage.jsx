@@ -12,7 +12,7 @@ const values = [
   { icon: Users, title: "Partnership", desc: "We build long-term relationships based on trust, collaboration, and mutual success." },
 ];
 
-const FOUNDER_PHOTO = "https://customer-assets.emergentagent.com/job_scm-it-agency/artifacts/6oftuhat_0beb343b-8936-4850-a845-90703569df51.jpg";
+const FOUNDER_PHOTO = "https://customer-assets.emergentagent.com/job_scm-it-agency/artifacts/r68o7dvu_Gemini_Generated_Image_ezcjk8ezcjk8ezcj.png";
 
 const leadership = [
   {
@@ -153,8 +153,7 @@ export default function AboutPage() {
                   <img
                     src={FOUNDER_PHOTO}
                     alt={l.name}
-                    className="w-full h-full object-cover"
-                    style={{ transform: "scale(1.6)", transformOrigin: "50% 30%" }}
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <h3 className="font-heading font-bold text-[#1E3A6E] text-2xl mb-1">{l.name}</h3>
