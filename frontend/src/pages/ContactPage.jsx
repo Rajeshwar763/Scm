@@ -57,11 +57,11 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-20 overflow-hidden" data-testid="contact-banner">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/8127807/pexels-photo-8127807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            src="https://images.unsplash.com/photo-1766066014237-00645c74e9c6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjB3b21hbiUyMGN1c3RvbWVyJTIwc3VwcG9ydCUyMGhlYWRzZXQlMjBzbWlsaW5nJTIwY2FsbCUyMGNlbnRlciUyMGRlc2t8ZW58MHx8fHwxNzc0OTM4ODcwfDA&ixlib=rb-4.1.0&q=85"
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-[#0F1C35]/87" />
+          <div className="absolute inset-0 bg-[#0F1C35]/78" />
         </div>
         <div className="container-max text-center relative z-10">
           <p className="text-[#E8622A] text-xs font-semibold uppercase tracking-widest mb-3">Get In Touch</p>
