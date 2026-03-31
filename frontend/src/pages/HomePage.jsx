@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Users, Briefcase, Award, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Shield, Clock } from "lucide-react";
+import { Users, Briefcase, Award, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Shield } from "lucide-react";
 import SEO from "../components/SEO";
 
 const HERO_IMG = "https://images.pexels.com/photos/7580750/pexels-photo-7580750.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";

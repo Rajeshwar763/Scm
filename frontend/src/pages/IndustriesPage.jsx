@@ -41,6 +41,19 @@ const industries = [
   },
 ];
 
+const cardAnim = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.6 },
+};
+
+const ctaAnim = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+};
+
 export default function IndustriesPage() {
   return (
     <div className="font-body">
@@ -74,10 +87,7 @@ export default function IndustriesPage() {
           {industries.map((ind, i) => (
             <motion.div
               key={ind.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              {...cardAnim}
               data-testid={`industry-detail-${ind.name.replace(/\s+/g, '-').toLowerCase()}`}
               className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${i % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
             >
@@ -108,7 +118,7 @@ export default function IndustriesPage() {
       {/* CTA */}
       <section className="bg-[#1E3A6E] py-20" data-testid="industries-cta">
         <div className="container-max text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <motion.div {...ctaAnim}>
             <h2 className="font-heading text-3xl font-bold text-white mb-4">Don't See Your Industry?</h2>
             <p className="text-white/70 mb-8 max-w-lg mx-auto">We work across many more sectors. Contact us to discuss your specific manpower requirements.</p>
             <Link to="/contact" data-testid="industries-contact-cta" className="inline-flex items-center gap-2 bg-[#E8622A] text-white px-8 py-3.5 rounded-md font-semibold hover:bg-[#D05625] transition-all hover:scale-105">

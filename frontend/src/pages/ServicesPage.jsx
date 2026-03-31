@@ -86,6 +86,12 @@ const services = [
   },
 ];
 
+const cardAnim = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+};
+
 export default function ServicesPage() {
   return (
     <div className="font-body">
@@ -119,9 +125,7 @@ export default function ServicesPage() {
           {services.map((s, i) => (
             <motion.div
               key={s.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              {...cardAnim}
               transition={{ duration: 0.6, delay: i * 0.05 }}
               data-testid={`service-detail-${s.title.replace(/\s+/g, '-').toLowerCase()}`}
               className={`bg-white rounded-2xl border-l-4 ${s.borderColor} shadow-sm hover:shadow-md transition-shadow overflow-hidden`}
