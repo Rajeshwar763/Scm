@@ -49,6 +49,8 @@ export default function IndustriesPage() {
         description="SCM Group provides skilled manpower for IT, manufacturing, construction, facility management, and international placement. Expert workforce solutions for every industry in India."
         keywords="IT staffing Hyderabad, manufacturing manpower India, construction workers Telangana, facility management staffing, international placement India, industrial workers Hyderabad"
       />
+      {/* Banner */}
+      <section className="relative pt-32 pb-20 overflow-hidden" data-testid="industries-banner">
         <div className="absolute inset-0">
           <img
             src="https://images.pexels.com/photos/32467382/pexels-photo-32467382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"

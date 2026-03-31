@@ -42,21 +42,21 @@ Create a modern, professional corporate website for SCM Group Management Service
 - [2025-03] Framer-motion scroll animations
 - [2025-03] All data-testid attributes on interactive elements
 - [2025-03] Full test suite passed (100% backend, 100% frontend)
+- [2025-03] Real company details: address, phones, emails (Chandramohan Sivala / +91 81435 97569 / info@scmgroup-services.com)
+- [2025-03] Authentic Indian-theme stock images across all pages
+- [2025-03] Founder photo (Chandramohan Sivala) with zoom to hide image borders
+- [2025-03] WhatsApp floating chat button linking to +91 81435 97569
+- [2025-03] SEO meta tags (react-helmet-async) — unique title, description, keywords per all 7 pages
+- [2025-03] Fixed banner section tags lost during SEO injection (all 5 affected pages: Careers, Clients, Contact, Industries, Services)
+- [2025-03] Cleaned duplicate dead-code return in WhatsAppButton.jsx
 
 ## Backlog / Next Steps (P0–P2)
-### P0 (Critical)
-- Update placeholder phone number (+91 90000 12345) with real number
-- Update placeholder email (info@scmgroup.in) with real email
-
 ### P1 (Important)
 - Add admin dashboard to view contact form submissions and career applications
 - Add real client logos/images to replace text-based client cards
-- Add real leadership team photos
 - Update LinkedIn URL with actual SCM Group LinkedIn page
 
 ### P2 (Nice to Have)
-- SEO meta tags (title, description, OG tags per page)
-- WhatsApp chat widget
 - Google Analytics integration
 - Blog/News section
 - Email notification on form submission (Resend/SendGrid)

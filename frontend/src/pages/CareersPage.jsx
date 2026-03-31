@@ -240,6 +240,8 @@ export default function CareersPage() {
         description="Explore job openings at SCM Group Management Services in Hyderabad. We're hiring IT staffing consultants, HR business partners, recruitment specialists, account managers, and payroll executives."
         keywords="HR jobs Hyderabad, staffing jobs Telangana, recruitment specialist jobs India, IT staffing consultant jobs, payroll executive jobs Hyderabad, careers at staffing company"
       />
+      {/* Banner */}
+      <section className="relative pt-32 pb-20 overflow-hidden" data-testid="careers-banner">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1627599936744-51d288f89af4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwyfHxJbmRpYW4lMjBvZmZpY2UlMjB0ZWFtJTIwZ3JvdXAlMjBzbWlsaW5nJTIwd2lkZSUyMHNob3QlMjBwYW5vcmFtaWMlMjBtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBwcm9mZXNzaW9uYWxzfGVufDB8fHx8MTc3NDg2OTYzNXww&ixlib=rb-4.1.0&q=85"

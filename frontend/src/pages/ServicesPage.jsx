@@ -94,6 +94,8 @@ export default function ServicesPage() {
         description="Comprehensive staffing services: IT staffing, manpower supply, RPO, payroll management, and contract staffing in Hyderabad, Telangana. SCM Group delivers skilled talent across all industries."
         keywords="IT staffing services Hyderabad, manpower supply Telangana, RPO services India, payroll management Hyderabad, contract staffing India, recruitment outsourcing Hyderabad"
       />
+      {/* Banner */}
+      <section className="relative pt-32 pb-20 overflow-hidden" data-testid="services-banner">
         <div className="absolute inset-0">
           <img
             src="https://images.pexels.com/photos/6804068/pexels-photo-6804068.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
