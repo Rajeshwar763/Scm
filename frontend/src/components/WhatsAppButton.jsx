@@ -1,5 +1,5 @@
 export default function WhatsAppButton() {
-  const url = "https://wa.me/918143597569?text=Hello%2C%20I%27m%20interested%20in%20SCM%20Group%27s%20staffing%20services.%20Please%20get%20in%20touch.";
+  const url = "https://web.whatsapp.com/send?phone=918143597569&text=Hello%2C%20I%27m%20interested%20in%20SCM%20Group%27s%20staffing%20services.%20Please%20get%20in%20touch.";
 
   return (
     <a
