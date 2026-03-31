@@ -97,9 +97,7 @@ function PartnerCard({ p, index }) {
       target="_blank"
       rel="noopener noreferrer"
       data-testid={`partner-card-${index}`}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      {...pageAnim}
       transition={{ duration: 0.5, delay: index * 0.06 }}
       className="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col group"
     >
@@ -244,9 +242,7 @@ export default function ClientsPage() {
             {industries.map((ind, i) => (
               <motion.div
                 key={ind}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                {...pageAnim}
                 transition={{ delay: i * 0.05 }}
                 data-testid={`industry-supported-${i}`}
                 className="flex items-center gap-3 bg-[#F8FAFC] rounded-lg p-4 border border-gray-100"

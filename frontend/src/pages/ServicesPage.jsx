@@ -91,6 +91,7 @@ const cardAnim = {
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
 };
+const ctaAnim = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
 
 export default function ServicesPage() {
   return (
@@ -169,7 +170,7 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="bg-[#F8FAFC] py-20" data-testid="services-cta">
         <div className="container-max text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <motion.div {...ctaAnim}>
             <p className="text-label mb-3">Let's Get Started</p>
             <h2 className="font-heading text-3xl font-bold text-[#1E3A6E] mb-4">Have a Specific Staffing Need?</h2>
             <p className="text-gray-600 mb-8 max-w-lg mx-auto">Reach out to our team and we'll craft a custom workforce solution that fits your requirements and budget.</p>

@@ -36,6 +36,10 @@ const testimonials = [
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
 const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
+const heroAnim = { initial: { opacity: 0, y: 40 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.8 } };
+const ctaAnim = { initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
+const statAnim = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
+const slideRightStrong = { initial: { opacity: 0, x: 30 }, whileInView: { opacity: 1, x: 0 }, viewport: { once: true }, transition: { duration: 0.7 } };
 
 const homePartners = [
   { name: "Visista Visas", domain: "visistavisas.com", initials: "VV", bg: "#1B4B9A", url: "https://visistavisas.com/" },
@@ -93,9 +97,7 @@ export default function HomePage() {
         </div>
         <div className="relative z-10 container-max pt-20 pb-12">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            {...heroAnim}
             className="max-w-2xl"
           >
             <span className="inline-block bg-[#E8622A]/20 border border-[#E8622A]/40 text-[#E8622A] px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-6">
@@ -134,9 +136,7 @@ export default function HomePage() {
             {stats.map((s, i) => (
               <motion.div
                 key={s.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                {...statAnim}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="text-center"
                 data-testid={`stat-${i}`}
@@ -176,10 +176,7 @@ export default function HomePage() {
               </motion.div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
+              {...slideRightStrong}
               className="relative"
             >
               <img src={ABOUT_IMG} alt="SCM Group Team" className="w-full h-[420px] object-cover rounded-2xl shadow-xl" />
@@ -319,7 +316,7 @@ export default function HomePage() {
       {/* CTA */}
       <section className="bg-[#1E3A6E] py-20" data-testid="cta-section">
         <div className="container-max text-center">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <motion.div {...ctaAnim}>
             <p className="text-[#E8622A] text-xs font-semibold uppercase tracking-widest mb-4">Get Started Today</p>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Build Your Dream Team?

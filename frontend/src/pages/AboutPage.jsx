@@ -29,6 +29,7 @@ const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
 const wvFadeUp = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
 const wvSlideLeft = { initial: { opacity: 0, x: -20 }, whileInView: { opacity: 1, x: 0 }, viewport: { once: true } };
 const wvSlideRight = { initial: { opacity: 0, x: 20 }, whileInView: { opacity: 1, x: 0 }, viewport: { once: true } };
+const wvSlideLeftStrong = { initial: { opacity: 0, x: -30 }, whileInView: { opacity: 1, x: 0 }, viewport: { once: true }, transition: { duration: 0.7 } };
 
 export default function AboutPage() {
   return (
@@ -61,7 +62,7 @@ export default function AboutPage() {
       <section className="section-padding bg-white" data-testid="company-overview">
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
+            <motion.div {...wvSlideLeftStrong}>
               <img src={TEAM_IMG} alt="SCM Group Team" className="w-full h-[440px] object-cover rounded-2xl shadow-xl" />
             </motion.div>
             <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}>
