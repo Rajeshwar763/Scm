@@ -1,8 +1,138 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, ExternalLink } from "lucide-react";
 import SEO from "../components/SEO";
+
+const partners = [
+  {
+    name: "Visista Visas",
+    url: "https://visistavisas.com/",
+    category: "Visa & Immigration",
+    description: "Expert employment visa consultancy for USA, UK, Europe & Dubai. Trusted immigration specialists based in Hyderabad.",
+    domain: "visistavisas.com",
+    initials: "VV",
+    bg: "#1B4B9A",
+  },
+  {
+    name: "Vaakruthi",
+    url: "https://www.vaakruthi.com/",
+    category: "Staffing & HR Tech",
+    description: "Leading global recruitment, training & placement, RPO, and software development services since 2015.",
+    domain: "vaakruthi.com",
+    initials: "VK",
+    bg: "#E8622A",
+  },
+  {
+    name: "Metrickn",
+    url: "https://metrickn.in/",
+    category: "Migration & Education",
+    description: "Global education consultancy helping students secure admissions and visas for universities in USA, UK, Canada & Australia.",
+    domain: "metrickn.in",
+    initials: "MK",
+    bg: "#2E7D32",
+  },
+  {
+    name: "Zero-Carbon",
+    url: "https://zero-carbon.de/",
+    category: "Green Technology",
+    description: "World's first zero-carbon streaming & digital platform powered by AI, blockchain & 100% renewable energy.",
+    domain: "zero-carbon.de",
+    initials: "ZC",
+    bg: "#1B6B35",
+  },
+  {
+    name: "Star Global Alliance",
+    url: "https://starglobalalliance.com/",
+    category: "Immigration & Education",
+    description: "OMARA-authorized immigration consultancy for Australia, Canada, New Zealand, UK & USA. Established in 2001.",
+    domain: "starglobalalliance.com",
+    initials: "SG",
+    bg: "#C0392B",
+  },
+  {
+    name: "Wish Global",
+    url: "https://wishglobalimmigrationservices.com/",
+    category: "Visa & Immigration",
+    description: "Trusted visa and immigration consultant in Hyderabad with 10+ years helping students, professionals and families.",
+    domain: "wishglobalimmigrationservices.com",
+    initials: "WG",
+    bg: "#5B2D8E",
+  },
+  {
+    name: "Peddireddi Tours",
+    url: "https://www.peddireddi.in/",
+    category: "Travel & Tourism",
+    description: "Budget-friendly Europe tours with guides fluent in regional Indian languages, plus full Schengen visa assistance.",
+    domain: "peddireddi.in",
+    initials: "PT",
+    bg: "#D35400",
+  },
+  {
+    name: "Pudami Designs",
+    url: "https://www.pudamidesigns.com/",
+    category: "Design & Marketing",
+    description: "Creative design agency in Vijayawada & Hyderabad offering branding, web design, digital marketing, and social media.",
+    domain: "pudamidesigns.com",
+    initials: "PD",
+    bg: "#7D3C98",
+  },
+  {
+    name: "Skyra Interiors",
+    url: "https://skyrainteriors.com/",
+    category: "Interior & Construction",
+    description: "Full-service interior painting, waterproofing, and construction solutions at below-market prices across India.",
+    domain: "skyrainteriors.com",
+    initials: "SI",
+    bg: "#2C3E50",
+  },
+];
+
+function PartnerCard({ p, index }) {
+  const [imgErr, setImgErr] = useState(false);
+  return (
+    <motion.a
+      href={p.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      data-testid={`partner-card-${index}`}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.06 }}
+      className="bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col group"
+    >
+      <div className="flex items-center gap-4 mb-4">
+        <div className="w-14 h-14 rounded-xl overflow-hidden flex items-center justify-center flex-shrink-0 bg-gray-50 border border-gray-100">
+          {!imgErr ? (
+            <img
+              src={`https://logo.clearbit.com/${p.domain}`}
+              alt={p.name}
+              className="w-full h-full object-contain p-1.5"
+              onError={() => setImgErr(true)}
+            />
+          ) : (
+            <div
+              className="w-full h-full flex items-center justify-center text-white font-bold text-base font-heading"
+              style={{ backgroundColor: p.bg }}
+            >
+              {p.initials}
+            </div>
+          )}
+        </div>
+        <div className="min-w-0">
+          <span className="text-xs font-semibold text-[#E8622A] uppercase tracking-wider block mb-0.5">{p.category}</span>
+          <h3 className="font-heading font-bold text-[#1E3A6E] text-base leading-tight">{p.name}</h3>
+        </div>
+      </div>
+      <p className="text-gray-500 text-sm leading-relaxed flex-1">{p.description}</p>
+      <div className="mt-4 flex items-center gap-1.5 text-[#E8622A] text-sm font-semibold group-hover:gap-2.5 transition-all">
+        Visit Website <ExternalLink size={13} />
+      </div>
+    </motion.a>
+  );
+}
 
 const clients = [
   "CloudEdge Technologies", "BuildRight Infrastructure", "FacilityCare Services",
@@ -144,6 +274,24 @@ export default function ClientsPage() {
                 <p className="font-heading font-bold text-[#1E3A6E] text-sm">{t.name}</p>
                 <p className="text-gray-400 text-xs mt-0.5">{t.company}</p>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partners */}
+      <section className="section-padding bg-white" data-testid="partners-section">
+        <div className="container-max">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
+            <p className="text-label mb-3">Strategic Alliances</p>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">Our Partner Network</h2>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+              We collaborate with a curated network of trusted partners across immigration, education, technology, design, and more — extending our value to clients beyond staffing.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {partners.map((p, i) => (
+              <PartnerCard key={p.domain} p={p} index={i} />
             ))}
           </div>
         </div>

@@ -47,7 +47,8 @@ Create a modern, professional corporate website for SCM Group Management Service
 - [2025-03] Founder photo (Chandramohan Sivala) with zoom to hide image borders
 - [2025-03] WhatsApp floating chat button linking to +91 81435 97569
 - [2025-03] SEO meta tags (react-helmet-async) — unique title, description, keywords per all 7 pages
-- [2025-03] Fixed banner section tags lost during SEO injection (all 5 affected pages: Careers, Clients, Contact, Industries, Services)
+- [2025-03] Partner Network section added to Clients page (9 partners: Visista Visas, Vaakruthi, Metrickn, Zero-Carbon, Star Global Alliance, Wish Global, Peddireddi Tours, Pudami Designs, Skyra Interiors) with Clearbit logos + styled-initials fallback, category tags, descriptions, and clickable links
+- [2025-03] Compact Partners strip added to Home page between Testimonials and CTA
 - [2025-03] Cleaned duplicate dead-code return in WhatsAppButton.jsx
 
 ## Backlog / Next Steps (P0–P2)

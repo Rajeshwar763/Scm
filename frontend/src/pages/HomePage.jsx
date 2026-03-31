@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Users, Briefcase, Award, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Shield, Clock } from "lucide-react";
 import SEO from "../components/SEO";
@@ -35,6 +36,47 @@ const testimonials = [
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } };
 const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
+
+const homePartners = [
+  { name: "Visista Visas", domain: "visistavisas.com", initials: "VV", bg: "#1B4B9A", url: "https://visistavisas.com/" },
+  { name: "Vaakruthi", domain: "vaakruthi.com", initials: "VK", bg: "#E8622A", url: "https://www.vaakruthi.com/" },
+  { name: "Metrickn", domain: "metrickn.in", initials: "MK", bg: "#2E7D32", url: "https://metrickn.in/" },
+  { name: "Zero-Carbon", domain: "zero-carbon.de", initials: "ZC", bg: "#1B6B35", url: "https://zero-carbon.de/" },
+  { name: "Star Global Alliance", domain: "starglobalalliance.com", initials: "SG", bg: "#C0392B", url: "https://starglobalalliance.com/" },
+  { name: "Wish Global", domain: "wishglobalimmigrationservices.com", initials: "WG", bg: "#5B2D8E", url: "https://wishglobalimmigrationservices.com/" },
+  { name: "Peddireddi Tours", domain: "peddireddi.in", initials: "PT", bg: "#D35400", url: "https://www.peddireddi.in/" },
+  { name: "Pudami Designs", domain: "pudamidesigns.com", initials: "PD", bg: "#7D3C98", url: "https://www.pudamidesigns.com/" },
+  { name: "Skyra Interiors", domain: "skyrainteriors.com", initials: "SI", bg: "#2C3E50", url: "https://skyrainteriors.com/" },
+];
+
+function HomePartnerChip({ p }) {
+  const [imgErr, setImgErr] = useState(false);
+  return (
+    <a
+      href={p.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={p.name}
+      className="flex items-center gap-3 bg-white border border-gray-100 rounded-xl px-5 py-3.5 shadow-sm hover:shadow-md hover:border-[#E8622A]/30 transition-all flex-shrink-0 group"
+    >
+      <div className="w-9 h-9 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
+        {!imgErr ? (
+          <img
+            src={`https://logo.clearbit.com/${p.domain}`}
+            alt={p.name}
+            className="w-full h-full object-contain"
+            onError={() => setImgErr(true)}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-white text-xs font-bold font-heading" style={{ backgroundColor: p.bg }}>
+            {p.initials}
+          </div>
+        )}
+      </div>
+      <span className="font-heading font-semibold text-[#1E3A6E] text-sm whitespace-nowrap group-hover:text-[#E8622A] transition-colors">{p.name}</span>
+    </a>
+  );
+}
 
 export default function HomePage() {
   return (
@@ -248,6 +290,29 @@ export default function HomePage() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* Partners Strip */}
+      <section className="section-padding bg-white" data-testid="partners-strip-section">
+        <div className="container-max">
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-10">
+            <motion.p variants={fadeUp} className="text-label mb-3">Strategic Alliances</motion.p>
+            <motion.h2 variants={fadeUp} className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">Our Partner Network</motion.h2>
+            <motion.p variants={fadeUp} className="text-gray-600 mt-4 max-w-xl mx-auto">
+              Collaborating with trusted partners across immigration, education, green tech, design, and tourism.
+            </motion.p>
+          </motion.div>
+          <div className="flex flex-wrap gap-4 justify-center">
+            {homePartners.map((p) => (
+              <HomePartnerChip key={p.domain} p={p} />
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link to="/clients" data-testid="view-all-partners-link" className="inline-flex items-center gap-2 text-[#1E3A6E] font-semibold hover:text-[#E8622A] transition-colors text-sm">
+              View All Partners <ArrowRight size={16} />
+            </Link>
+          </div>
         </div>
       </section>
 
