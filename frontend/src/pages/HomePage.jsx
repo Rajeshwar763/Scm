@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Users, Briefcase, Award, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Shield, Clock } from "lucide-react";
+import SEO from "../components/SEO";
 
 const HERO_IMG = "https://images.pexels.com/photos/7580750/pexels-photo-7580750.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 const ABOUT_IMG = "https://images.unsplash.com/photo-1628495073765-e7fdbb7c25fc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBkaXZlcnNlJTIwb2ZmaWNlJTIwdGVhbSUyMHdvcmtpbmclMjB0b2dldGhlciUyMGxhcHRvcCUyMGJyYWluc3Rvcm1pbmd8ZW58MHx8fHwxNzc0ODY3NjgyfDA&ixlib=rb-4.1.0&q=85";
@@ -38,7 +39,11 @@ const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
 export default function HomePage() {
   return (
     <div className="font-body">
-      {/* Hero */}
+      <SEO
+        title="IT Staffing & Manpower Agency Hyderabad"
+        description="SCM Group Management Services — Leading IT staffing, manpower supply, RPO, and payroll management agency in Hyderabad, Telangana. Trusted by 50+ corporate clients across India."
+        keywords="IT staffing Hyderabad, manpower agency Telangana, manpower supply Hyderabad, IT recruitment agency India, staffing company Hyderabad, contract staffing Telangana, payroll management India"
+      />
       <section className="relative min-h-screen flex items-center" data-testid="hero-section">
         <div className="absolute inset-0">
           <img src={HERO_IMG} alt="" className="w-full h-full object-cover" />

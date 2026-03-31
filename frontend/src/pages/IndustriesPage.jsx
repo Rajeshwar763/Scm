@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import SEO from "../components/SEO";
 
 const industries = [
   {
@@ -43,8 +44,11 @@ const industries = [
 export default function IndustriesPage() {
   return (
     <div className="font-body">
-      {/* Banner */}
-      <section className="relative pt-32 pb-20 overflow-hidden" data-testid="industries-banner">
+      <SEO
+        title="Industries We Serve | IT, Manufacturing, Construction Staffing"
+        description="SCM Group provides skilled manpower for IT, manufacturing, construction, facility management, and international placement. Expert workforce solutions for every industry in India."
+        keywords="IT staffing Hyderabad, manufacturing manpower India, construction workers Telangana, facility management staffing, international placement India, industrial workers Hyderabad"
+      />
         <div className="absolute inset-0">
           <img
             src="https://images.pexels.com/photos/32467382/pexels-photo-32467382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"

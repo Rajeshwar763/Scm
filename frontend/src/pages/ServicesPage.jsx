@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Users, Briefcase, TrendingUp, Shield, FileText, CheckCircle, ArrowRight } from "lucide-react";
+import SEO from "../components/SEO";
 
 const services = [
   {
@@ -88,8 +89,11 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="font-body">
-      {/* Banner */}
-      <section className="relative pt-32 pb-20 overflow-hidden" data-testid="services-banner">
+      <SEO
+        title="IT Staffing, Manpower Supply & RPO Services Hyderabad"
+        description="Comprehensive staffing services: IT staffing, manpower supply, RPO, payroll management, and contract staffing in Hyderabad, Telangana. SCM Group delivers skilled talent across all industries."
+        keywords="IT staffing services Hyderabad, manpower supply Telangana, RPO services India, payroll management Hyderabad, contract staffing India, recruitment outsourcing Hyderabad"
+      />
         <div className="absolute inset-0">
           <img
             src="https://images.pexels.com/photos/6804068/pexels-photo-6804068.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"

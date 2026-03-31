@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import SEO from "../components/SEO";
 
 const clients = [
   "CloudEdge Technologies", "BuildRight Infrastructure", "FacilityCare Services",
@@ -43,8 +44,11 @@ function ClientLogo({ name }) {
 export default function ClientsPage() {
   return (
     <div className="font-body">
-      {/* Banner */}
-      <section className="relative pt-32 pb-20 overflow-hidden" data-testid="clients-banner">
+      <SEO
+        title="Our Clients | Trusted Manpower Agency Hyderabad"
+        description="SCM Group serves 50+ corporate clients across IT, manufacturing, construction, and facility sectors in India. Trusted manpower and IT staffing partner in Hyderabad, Telangana."
+        keywords="staffing agency clients Hyderabad, manpower company Telangana, IT staffing clients India, corporate clients SCM Group, trusted staffing company Hyderabad"
+      />
         <div className="absolute inset-0">
           <img
             src="https://images.pexels.com/photos/18848926/pexels-photo-18848926.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Target, Eye, Heart, Shield, Users, Award, CheckCircle, ArrowRight } from "lucide-react";
+import SEO from "../components/SEO";
 
 const TEAM_IMG = "https://images.unsplash.com/photo-1681164315051-add1906a9b07?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxJbmRpYW4lMjBkaXZlcnNlJTIwb2ZmaWNlJTIwdGVhbSUyMHdvcmtpbmclMjB0b2dldGhlciUyMGxhcHRvcCUyMGJyYWluc3Rvcm1pbmd8ZW58MHx8fHwxNzc0ODY3NjgyfDA&ixlib=rb-4.1.0&q=85";
 
@@ -27,6 +28,11 @@ const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
 export default function AboutPage() {
   return (
     <div className="font-body">
+      <SEO
+        title="About Us | IT Staffing Company Hyderabad"
+        description="About SCM Group Management Services — founded by Chandramohan Sivala, a decade of excellence in IT staffing, manpower solutions, and HR services in Hyderabad, Telangana, India."
+        keywords="about SCM Group, staffing company Hyderabad, HR agency Telangana, manpower solutions India, IT staffing company about"
+      />
       {/* Banner */}
       <section className="relative pt-32 pb-20 overflow-hidden" data-testid="about-banner">
         <div className="absolute inset-0">
@@ -144,7 +150,12 @@ export default function AboutPage() {
             {leadership.map((l, i) => (
               <motion.div key={l.name} variants={fadeUp} data-testid={`leader-card-${i}`} className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-shadow text-center p-10 max-w-lg w-full">
                 <div className="w-36 h-36 rounded-full overflow-hidden mx-auto mb-6 ring-4 ring-[#E8622A]/30 shadow-lg">
-                  <img src={FOUNDER_PHOTO} alt={l.name} className="w-full h-full object-cover object-top" />
+                  <img
+                    src={FOUNDER_PHOTO}
+                    alt={l.name}
+                    className="w-full h-full object-cover"
+                    style={{ transform: "scale(1.6)", transformOrigin: "50% 30%" }}
+                  />
                 </div>
                 <h3 className="font-heading font-bold text-[#1E3A6E] text-2xl mb-1">{l.name}</h3>
                 <p className="text-[#E8622A] text-xs font-semibold uppercase tracking-wider mb-5">{l.role}</p>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, CheckCircle, Send } from "lucide-react";
 import axios from "axios";
+import SEO from "../components/SEO";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
@@ -53,8 +54,11 @@ export default function ContactPage() {
 
   return (
     <div className="font-body">
-      {/* Banner */}
-      <section className="relative pt-32 pb-20 overflow-hidden" data-testid="contact-banner">
+      <SEO
+        title="Contact Us | Manpower Agency Hyderabad | +91 81435 97569"
+        description="Contact SCM Group Management Services for IT staffing, manpower supply, and HR solutions in Hyderabad. Call +91 81435 97569 or email info@scmgroup-services.com. Located in Moosapet, Hyderabad."
+        keywords="contact SCM Group, staffing agency Hyderabad contact, manpower agency phone number, IT staffing contact Hyderabad, SCM Group Moosapet Hyderabad, manpower agency Telangana contact"
+      />
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1766066014237-00645c74e9c6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjB3b21hbiUyMGN1c3RvbWVyJTIwc3VwcG9ydCUyMGhlYWRzZXQlMjBzbWlsaW5nJTIwY2FsbCUyMGNlbnRlciUyMGRlc2t8ZW58MHx8fHwxNzc0OTM4ODcwfDA&ixlib=rb-4.1.0&q=85"
