@@ -24,7 +24,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    lines: ["info@scmgroup-services.com", "SCM@scmgroup-services.com"],
+    lines: ["info@scmgroup-services.com", "SCM@scmgroup-services.com", "info2scmgroup@gmail.com"],
   },
   {
     icon: Clock,

@@ -34,7 +34,7 @@ export default function Footer() {
               SCM Group Management Services — India's trusted IT staffing and manpower solution provider, connecting businesses with top talent across diverse sectors.
             </p>
             <a
-              href="https://www.linkedin.com/company/scm-group"
+              href="https://www.linkedin.com/company/scm-group-services/"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="footer-linkedin-link"

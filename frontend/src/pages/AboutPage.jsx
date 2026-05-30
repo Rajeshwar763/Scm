@@ -12,13 +12,26 @@ const values = [
   { icon: Users, title: "Partnership", desc: "We build long-term relationships based on trust, collaboration, and mutual success." },
 ];
 
-const FOUNDER_PHOTO = "https://customer-assets.emergentagent.com/job_scm-it-agency/artifacts/r68o7dvu_Gemini_Generated_Image_ezcjk8ezcjk8ezcj.png";
+const FOUNDER_PHOTO = "https://customer-assets.emergentagent.com/job_scm-it-agency/artifacts/r68o7dvu_Gemini_Generated_Image_ezcjk8ezcjk8ezcj.png"; // kept as photo is now in leadership array
 
 const leadership = [
   {
     name: "Chandramohan Sivala",
     role: "Founder & CEO",
+    photo: "https://customer-assets.emergentagent.com/job_scm-it-agency/artifacts/r68o7dvu_Gemini_Generated_Image_ezcjk8ezcjk8ezcj.png",
     desc: "A visionary entrepreneur with deep expertise in IT staffing, manpower solutions, and HR management. Chandramohan founded SCM Group Management Services with the mission of bridging the gap between skilled Indian talent and the industries that need them most. Under his leadership, SCM Group has grown into a trusted workforce partner for clients across IT, manufacturing, construction, and facility management sectors.",
+  },
+  {
+    name: "Sivala Vasu Deva Rao",
+    role: "Director",
+    photo: "https://customer-assets.emergentagent.com/job_scm-it-agency/artifacts/pcvikzns_WhatsApp%20Image%202026-05-30%20at%2013.12.12.jpeg",
+    desc: "Mr. Sivala Vasu Deva Rao contributes significantly to the company's operational coordination and administrative management functions. His involvement supports efficient business processes, organizational management, and service execution, strengthening the company's operational capabilities and growth initiatives.",
+  },
+  {
+    name: "Sivala Laxmi Kantham",
+    role: "Director",
+    photo: "https://customer-assets.emergentagent.com/job_scm-it-agency/artifacts/nhna6pys_WhatsApp%20Image%202026-05-30%20at%2013.12.12%20%281%29.jpeg",
+    desc: "Mrs. Sivala Laxmi Kantham plays an important role in supporting the organization's administrative and business management activities. Her contribution enhances internal coordination, operational efficiency, and organizational support functions, contributing to the company's smooth and professional operations.",
   },
 ];
 
@@ -151,20 +164,20 @@ export default function AboutPage() {
       <section className="section-padding bg-[#F8FAFC]" data-testid="leadership-section">
         <div className="container-max">
           <motion.div {...wvFadeUp} className="text-center mb-14">
-            <p className="text-label mb-3">Meet the Founder</p>
+            <p className="text-label mb-3">Meet the Team</p>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#1E3A6E]">Our Leadership</h2>
           </motion.div>
-          <motion.div {...staggerView} className="flex justify-center">
+          <motion.div {...staggerView} className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {leadership.map((l, i) => (
-              <motion.div key={l.name} variants={fadeUp} data-testid={`leader-card-${i}`} className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-shadow text-center p-10 max-w-lg w-full">
-                <div className="w-36 h-36 rounded-full overflow-hidden mx-auto mb-6 ring-4 ring-[#E8622A]/30 shadow-lg">
+              <motion.div key={l.name} variants={fadeUp} data-testid={`leader-card-${i}`} className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-shadow text-center p-8">
+                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 ring-4 ring-[#E8622A]/30 shadow-lg">
                   <img
-                    src={FOUNDER_PHOTO}
+                    src={l.photo}
                     alt={l.name}
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <h3 className="font-heading font-bold text-[#1E3A6E] text-2xl mb-1">{l.name}</h3>
+                <h3 className="font-heading font-bold text-[#1E3A6E] text-xl mb-1">{l.name}</h3>
                 <p className="text-[#E8622A] text-xs font-semibold uppercase tracking-wider mb-5">{l.role}</p>
                 <p className="text-gray-500 text-sm leading-relaxed">{l.desc}</p>
               </motion.div>
