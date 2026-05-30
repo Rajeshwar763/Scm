@@ -24,7 +24,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    lines: ["info@scmgroup-services.com", "SCM@scmgroup-services.com", "info2scmgroup@gmail.com"],
+    lines: ["info@scmgroup-services.com", "info2scmgroup@gmail.com"],
   },
   {
     icon: Clock,
@@ -202,8 +202,8 @@ export default function ContactPage() {
                   <a href="mailto:info@scmgroup-services.com" data-testid="contact-email-link" className="flex items-center gap-3 text-white/80 hover:text-[#E8622A] transition-colors text-sm">
                     <Mail size={15} className="text-[#E8622A]" /> info@scmgroup-services.com
                   </a>
-                  <a href="mailto:SCM@scmgroup-services.com" className="flex items-center gap-3 text-white/80 hover:text-[#E8622A] transition-colors text-sm">
-                    <Mail size={15} className="text-[#E8622A]" /> SCM@scmgroup-services.com
+                  <a href="mailto:info2scmgroup@gmail.com" className="flex items-center gap-3 text-white/80 hover:text-[#E8622A] transition-colors text-sm">
+                    <Mail size={15} className="text-[#E8622A]" /> info2scmgroup@gmail.com
                   </a>
                 </div>
               </div>
