@@ -1,0 +1,28 @@
+{
+  "$schema": "https://codesandbox.io/schemas/tasks.json",
+  "setupTasks": [
+    {
+      "name": "Install Frontend Dependencies",
+      "command": "cd frontend && yarn install"
+    },
+    {
+      "name": "Install Backend Dependencies",
+      "command": "cd backend && pip install -r requirements.txt"
+    }
+  ],
+  "tasks": {
+    "start-backend": {
+      "name": "Start Backend",
+      "command": "cd backend && uvicorn server:app --reload --port 8001",
+      "runAtStart": true
+    },
+    "start-frontend": {
+      "name": "Start Frontend",
+      "command": "cd frontend && REACT_APP_BACKEND_URL=http://localhost:8001 yarn start",
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
+    }
+  }
+}
